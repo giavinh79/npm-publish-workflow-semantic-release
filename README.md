@@ -20,7 +20,7 @@
 
 3. Add the above token(s) to your [GitHub repository secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) (named as `GH_TOKEN`)
 
-<!-- 4. In GitHub repository settings, go to: actions -> general -> workflow permissions -> **Enable Read & Write Permissions** -->
+4. In GitHub repository settings, go to: actions -> general -> workflow permissions -> **Enable Read & Write Permissions**
 
 ## Typical Workflow for Versioning and Releases
 
