@@ -20,7 +20,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          # This makes action fetch all Git history so that Changesets can generate changelogs with the correct commits
+          # This makes action fetch all Git history
           fetch-depth: 0
 
       - name: Set-up Node.js

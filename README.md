@@ -1,9 +1,11 @@
-# Example Yarn 3 Workspaces Monorepo + NPM Publish Workflow w/ Changesets
+# Example Yarn 3 Workspaces Monorepo + NPM Publish Workflow w/ Semantic Release
 
 ## Description
 
 - Yarn 3 for package management and [Yarn Workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/) for managing multiple packages
 - [Semantic release](https://semantic-release.gitbook.io/semantic-release/) for versioning and release
+  - `semantic-release` is written using the latest ECMAScript 2017 features, without transpilation which requires **Node version 18.0.0** or higher.
+  - Slack notifications (https://github.com/juliuscc/semantic-release-slack-bot)
 - GitHub Actions for CI/CD
 - tsup for transpilation and bundling
 
@@ -19,29 +21,23 @@
 
 <!-- 4. In GitHub repository settings, go to: actions -> general -> workflow permissions -> **Enable Read & Write Permissions** -->
 
-
 ## Typical Workflow for Versioning and Releases
 
 **Contributor**:
 
 1. Make desired changes to packages and open PR.
-2. Make sure commits follow the [Angular Commit Message Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format). A tool like https://github.com/commitizen/cz-cli can help easily create these types of commits.
-
-
-More information can be found here: https://semantic-release.gitbook.io/semantic-release/#commit-message-format
-2. (If using squash workflow) Upon merging PR, when squashing the commits make sure the revised commit message follows proper conventions:  https://semantic-release.gitbook.io/semantic-release/support/troubleshooting#squashed-commits-are-ignored-by-semantic-release
+2. Make sure commits follow the [Angular Commit Message Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format). A tool like https://github.com/commitizen/cz-cli can help easily create these types of commits. More information can be found here: https://semantic-release.gitbook.io/semantic-release/#commit-message-format
+3. (If using squash workflow) Upon merging PR, when squashing the commits make sure the revised commit message follows proper conventions:  https://semantic-release.gitbook.io/semantic-release/support/troubleshooting#squashed-commits-are-ignored-by-semantic-release
 - https://semantic-release.gitbook.io/semantic-release/#commit-message-format
 
 **Release Process**:
 The [default](https://semantic-release.gitbook.io/semantic-release/usage/plugins#plugins-declaration-and-execution-order) `semantic-release` release process out of the box uses the plugins below in the following order (configured in `.releaserc`):
 
 ```
-[
-  "@semantic-release/commit-analyzer",
-  "@semantic-release/release-notes-generator",
-  "@semantic-release/npm",
-  "@semantic-release/github"
-]
+"@semantic-release/commit-analyzer",
+"@semantic-release/release-notes-generator",
+"@semantic-release/npm",
+"@semantic-release/github"
 ```
 
 With this configuration `semantic-release` will:
