@@ -1,0 +1,23 @@
+{
+  "branches": ["master"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/npm",
+    "@semantic-release/github",
+    ["@semantic-release/git", {
+      "assets": ["package.json"],
+      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }],
+    [
+      "semantic-release-slack-bot",
+      {
+        "notifyOnSuccess": true,
+        "notifyOnFail": true,
+        "markdownReleaseNotes": true,
+        "slackWebhook": "https://hooks.slack.com/services/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",
+        "branchesConfig": []
+      }
+    ]
+  ]
+}

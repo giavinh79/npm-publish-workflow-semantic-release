@@ -1,0 +1,23 @@
+{
+  "name": "gl-publish-workflow-semantic-test-math",
+  "version": "1.0.0",
+  "description": "Example Math Package",
+  "repository": "https://github.com/giavinh79/npm-publish-workflow-semantic-release",
+  "author": "giavinh79",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "prepare": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc"
+  },
+  "devDependencies": {
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
