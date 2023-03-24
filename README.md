@@ -6,6 +6,7 @@
 - [Semantic release](https://semantic-release.gitbook.io/semantic-release/) for versioning and release
   - `semantic-release` is written using the latest ECMAScript 2017 features, without transpilation which requires **Node version 18.0.0** or higher.
   - Versions must start at minimum 1.0.0 (for earlier versions look into docs for pre-releases)
+  - Support for monorepo: https://yarnpkg.com/package/semantic-release-monorepo
   - Slack notifications (https://github.com/juliuscc/semantic-release-slack-bot)
 - GitHub Actions for CI/CD
 - tsup for transpilation and bundling
