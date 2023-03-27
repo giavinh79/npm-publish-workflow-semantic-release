@@ -9,7 +9,7 @@
   "scripts": {
     "build-ci": "./scripts/build-workspace-packages.sh",
     "build": "yarn workspaces foreach -pt -v --no-private exec 'yarn lint && yarn build'",
-    "semantic-release": "semantic-release"
+    "semantic-release": "yarn workspaces foreach -pt -v --no-private exec 'npm run semantic-release'"
   },
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",

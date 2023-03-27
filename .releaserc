@@ -19,6 +19,5 @@
         "branchesConfig": []
       }
     ]
-  ],
-  "extends": "semantic-release-monorepo"
+  ]
 }

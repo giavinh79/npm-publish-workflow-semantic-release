@@ -11,7 +11,8 @@
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
     "prepare": "tsup index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
     "semantic-release": "^21.0.0",
