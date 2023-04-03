@@ -7,3 +7,7 @@ export const getSum = (numbers: number[]): number => {
     return acc + num;
   }, 0)
 }
+
+export const areStringsEqual = (a: string, b: string) => {
+  return a === b;
+}
