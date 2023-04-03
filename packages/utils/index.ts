@@ -11,3 +11,7 @@ export const getSum = (numbers: number[]): number => {
 export const areStringsEqual = (a: string, b: string) => {
   return a === b;
 }
+
+export const isNil = (element: any): boolean => {
+  return element != null;
+}
