@@ -17,11 +17,7 @@
 
 1. Use `npx semantic-release-cli setup` to automatically set up workflows for CI/CD, install dependencies and configs to your project, and even set up some auth permissions (i.e. npm token).
 
-2. Create [GitHub personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#personal-access-tokens-classic) - add all permissions for `repo` scope
-
-3. Add the above token(s) to your [GitHub repository secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) (named as `GH_TOKEN`)
-
-4. In GitHub repository settings, go to: actions -> general -> workflow permissions -> **Enable Read & Write Permissions**
+2. In GitHub repository settings, go to: actions -> general -> workflow permissions -> **Enable Read & Write Permissions**
 
 ## Typical Workflow for Versioning and Releases
 
