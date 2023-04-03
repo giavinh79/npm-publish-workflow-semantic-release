@@ -1,5 +1,5 @@
-export const areNumbersEqual = (a: number, b: number) => {
-  return a === b;
+export const areNumbersEqual = (a: number, b: number, c:number) => {
+  return a === b && b === c;
 }
 
 export const getSum = (numbers: number[]): number => {
